@@ -1,0 +1,30 @@
+###Crear un log
+POST http://localhost:3000/soft
+Content-Type: application/json
+
+{
+    "idTipoSoftware": 1,
+    "codigo": "1",
+    "marca": "A",
+    "version": "A"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/soft/
+
+###Listar un log
+GET http://localhost:3000/soft/2
+
+###Listar todos los tipos de logs
+GET http://localhost:3000/soft/type
+
+###Actualizar un log
+PUT http://localhost:3000/soft/2
+Content-Type: application/json
+
+{
+    "marca": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/soft/1

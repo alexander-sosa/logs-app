@@ -8,6 +8,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const HardwareLogRoutes_1 = __importDefault(require("./routes/logicos/HardwareLogRoutes"));
 const OtrosLogRoutes_1 = __importDefault(require("./routes/logicos/OtrosLogRoutes"));
+const SoftwareLogRoutes_1 = __importDefault(require("./routes/logicos/SoftwareLogRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -27,6 +28,7 @@ class Server {
     routes() {
         //this.app.use('/api', indexRoutes); //ruta de prueba, deberia mostrar Index Correcto
         this.app.use('/hard', HardwareLogRoutes_1.default);
+        this.app.use('/soft', SoftwareLogRoutes_1.default);
         this.app.use('/otro', OtrosLogRoutes_1.default);
     }
     ;
