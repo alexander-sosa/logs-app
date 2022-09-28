@@ -1,0 +1,25 @@
+###Crear un log
+POST http://localhost:3000/telc
+Content-Type: application/json
+
+{
+    "idHardwareLog": 1,
+    "idSoftwareLog": 1
+}
+
+###Listar todos los logs
+GET http://localhost:3000/telc
+
+###Listar un log
+GET http://localhost:3000/telc/2
+
+###Actualizar un log
+PUT http://localhost:3000/telc/2
+Content-Type: application/json
+
+{
+    "idHardwareLog": 2
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/telc/1
