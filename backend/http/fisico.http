@@ -1,0 +1,38 @@
+###Crear un log
+POST http://localhost:3000/fis
+Content-Type: application/json
+
+{
+    "idArea": 1,
+    "idServicio": 1,
+    "fecha": "2022-09-28T17",
+    "condicionServicio": "A",
+    "nroEvento": "1",
+    "tipoEvento": "A",
+    "condicion": "A",
+    "resultado": "A",
+    "responsable": "A"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/fis
+
+###Listar un log
+GET http://localhost:3000/fis/2
+
+###Listar todos las areas de logs
+GET http://localhost:3000/fis/area
+
+###Listar todos los servicios de logs
+GET http://localhost:3000/fis/serv
+
+###Actualizar un log
+PUT http://localhost:3000/fis/2
+Content-Type: application/json
+
+{
+    "condicion": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/fis/1

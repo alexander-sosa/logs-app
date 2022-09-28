@@ -9,6 +9,7 @@ import SoftwareLogRoutes from './routes/logicos/SoftwareLogRoutes';
 import TelecomLogRoutes from './routes/logicos/TelecomLogRoutes';
 import HelpDeskLogRoutes from './routes/logicos/HelpDeskLogRoutes';
 import SeguridadLogRoutes from './routes/logicos/SeguridadLogRoutes';
+import LogFisicoRoutes from './routes/fisicos/LogFisicoRoutes';
 
 class Server {
     public app : Application;
@@ -37,6 +38,7 @@ class Server {
         this.app.use('/help', HelpDeskLogRoutes);
         this.app.use('/seg', SeguridadLogRoutes);
         this.app.use('/otro', OtrosLogRoutes);
+        this.app.use('/fis', LogFisicoRoutes);
     };
 
     //Metodo para iniciar servidor
