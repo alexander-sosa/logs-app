@@ -11,6 +11,7 @@ const OtrosLogRoutes_1 = __importDefault(require("./routes/logicos/OtrosLogRoute
 const SoftwareLogRoutes_1 = __importDefault(require("./routes/logicos/SoftwareLogRoutes"));
 const TelecomLogRoutes_1 = __importDefault(require("./routes/logicos/TelecomLogRoutes"));
 const HelpDeskLogRoutes_1 = __importDefault(require("./routes/logicos/HelpDeskLogRoutes"));
+const SeguridadLogRoutes_1 = __importDefault(require("./routes/logicos/SeguridadLogRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -33,6 +34,7 @@ class Server {
         this.app.use('/soft', SoftwareLogRoutes_1.default);
         this.app.use('/telc', TelecomLogRoutes_1.default);
         this.app.use('/help', HelpDeskLogRoutes_1.default);
+        this.app.use('/seg', SeguridadLogRoutes_1.default);
         this.app.use('/otro', OtrosLogRoutes_1.default);
     }
     ;

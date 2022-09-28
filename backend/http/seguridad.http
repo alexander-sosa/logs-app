@@ -1,0 +1,30 @@
+###Crear un log
+POST http://localhost:3000/seg
+Content-Type: application/json
+
+{
+    "idTipoEvento": 1,
+    "nroEvento": "1",
+    "condicion": "A",
+    "resultado": "A"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/seg
+
+###Listar un log
+GET http://localhost:3000/seg/3
+
+###Listar todos los tipos de logs
+GET http://localhost:3000/seg/type
+
+###Actualizar un log
+PUT http://localhost:3000/seg/3
+Content-Type: application/json
+
+{
+    "condicion": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/seg/2
