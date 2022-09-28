@@ -1,0 +1,30 @@
+###Crear un log
+POST http://localhost:3000/help
+Content-Type: application/json
+
+{
+    "idTipoSoporte": 1,
+    "usuario": "1",
+    "condicion": "A",
+    "resultado": "A"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/help
+
+###Listar un log
+GET http://localhost:3000/help/2
+
+###Listar todos los tipos de logs
+GET http://localhost:3000/help/type
+
+###Actualizar un log
+PUT http://localhost:3000/help/2
+Content-Type: application/json
+
+{
+    "condicion": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/help/1

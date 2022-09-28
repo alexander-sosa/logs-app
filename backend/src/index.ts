@@ -7,6 +7,7 @@ import HardwareLogRoutes from './routes/logicos/HardwareLogRoutes';
 import OtrosLogRoutes from './routes/logicos/OtrosLogRoutes';
 import SoftwareLogRoutes from './routes/logicos/SoftwareLogRoutes';
 import TelecomLogRoutes from './routes/logicos/TelecomLogRoutes';
+import HelpDeskLogRoutes from './routes/logicos/HelpDeskLogRoutes';
 
 class Server {
     public app : Application;
@@ -32,6 +33,7 @@ class Server {
         this.app.use('/hard', HardwareLogRoutes);
         this.app.use('/soft', SoftwareLogRoutes);
         this.app.use('/telc', TelecomLogRoutes);
+        this.app.use('/help', HelpDeskLogRoutes);
         this.app.use('/otro', OtrosLogRoutes);
     };
 
