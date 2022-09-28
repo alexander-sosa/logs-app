@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
+const HardwareLogRoutes_1 = __importDefault(require("./routes/logicos/HardwareLogRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -25,6 +26,7 @@ class Server {
     //Metodo para rutas
     routes() {
         this.app.use('/api', indexRoutes_1.default); //ruta de prueba, deberia mostrar Index Correcto
+        this.app.use('/hard', HardwareLogRoutes_1.default);
     }
     ;
     //Metodo para iniciar servidor

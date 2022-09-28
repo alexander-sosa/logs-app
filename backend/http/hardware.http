@@ -1,0 +1,27 @@
+###Crear un log
+POST http://localhost:3000/hard
+Content-Type: application/json
+
+{
+    "nroSerie": "2",
+    "codigo": "2",
+    "marca": "B",
+    "modelo": "B"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/hard
+
+###Listar un log
+GET http://localhost:3000/hard/2
+
+###Actualizar un log
+PUT http://localhost:3000/hard/2
+Content-Type: application/json
+
+{
+    "marca": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/hard/1

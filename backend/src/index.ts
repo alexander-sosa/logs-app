@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import indexRoutes from './routes/indexRoutes';
+import HardwareLogRoutes from './routes/logicos/HardwareLogRoutes';
 
 class Server {
     public app : Application;
@@ -25,6 +26,7 @@ class Server {
     //Metodo para rutas
     routes(){
         this.app.use('/api', indexRoutes); //ruta de prueba, deberia mostrar Index Correcto
+        this.app.use('/hard', HardwareLogRoutes);
     };
 
     //Metodo para iniciar servidor

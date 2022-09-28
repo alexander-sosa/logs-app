@@ -138,6 +138,6 @@ CREATE TABLE LogFisico (
     ultimaActualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     estado bool NOT NULL DEFAULT TRUE,
     CONSTRAINT FisicoLog_pk PRIMARY KEY (idFisicoLog),
-    FOREIGN KEY (area) REFERENCES Area(idArea),
+    FOREIGN KEY (idArea) REFERENCES Area(idArea),
     FOREIGN KEY (idServicio) REFERENCES Servicio(idServicio)
 );
