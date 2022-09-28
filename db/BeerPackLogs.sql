@@ -1,6 +1,10 @@
 -- Beer Pack Online
 -- DB version: 0.0.1
 
+-- Database: beer_pack
+CREATE DATABASE beer_pack;
+USE beer_pack;
+
 -- LOGS LOGICOS
 -- Table: HardwareLog
 CREATE TABLE HardwareLog (
@@ -108,7 +112,7 @@ CREATE TABLE Area(
     idArea int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     descripcion VARCHAR(100) NOT NULL,
     ultimaActualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    estado bool NOT NULL D EFAULT true
+    estado bool NOT NULL DEFAULT true
 );
 
 -- Table: Servicio
