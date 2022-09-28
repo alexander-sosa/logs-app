@@ -1,0 +1,27 @@
+###Crear un log
+POST http://localhost:3000/otro
+Content-Type: application/json
+
+{
+    "caso": "1",
+    "descripcion": "A",
+    "condicion": "A",
+    "resultado": "A"
+}
+
+###Listar todos los logs
+GET http://localhost:3000/otro
+
+###Listar un log
+GET http://localhost:3000/otro/2
+
+###Actualizar un log
+PUT http://localhost:3000/otro/2
+Content-Type: application/json
+
+{
+    "descripcion": "B"
+}
+
+###Actualizar un log
+DELETE http://localhost:3000/otro/1

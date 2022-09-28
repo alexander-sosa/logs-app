@@ -4,6 +4,7 @@ import cors from 'cors';
 
 import indexRoutes from './routes/indexRoutes';
 import HardwareLogRoutes from './routes/logicos/HardwareLogRoutes';
+import OtrosLogRoutes from './routes/logicos/OtrosLogRoutes';
 
 class Server {
     public app : Application;
@@ -25,8 +26,9 @@ class Server {
 
     //Metodo para rutas
     routes(){
-        this.app.use('/api', indexRoutes); //ruta de prueba, deberia mostrar Index Correcto
+        //this.app.use('/api', indexRoutes); //ruta de prueba, deberia mostrar Index Correcto
         this.app.use('/hard', HardwareLogRoutes);
+        this.app.use('/otro', OtrosLogRoutes);
     };
 
     //Metodo para iniciar servidor
