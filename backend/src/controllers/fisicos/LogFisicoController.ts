@@ -14,9 +14,9 @@ class LogFisicoController{
     public async read (req: Request, res: Response){
         const logs = await pool.promise().query(' SELECT f.idFisicoLog, ' + 
                                                 ' f.idArea, ' +
-                                                ' a.descripcion, ' +
+                                                ' a.descripcion as descArea, ' +
                                                 ' f.idServicio, ' +
-                                                ' s.descripcion, ' +
+                                                ' s.descripcion as descServ, ' +
                                                 ' f.fecha, ' +
                                                 ' f.condicionServicio, ' +
                                                 ' f.nroEvento, ' +
@@ -62,9 +62,9 @@ class LogFisicoController{
 
         const logs = await pool.promise().query(' SELECT f.idFisicoLog, ' + 
                                                 ' f.idArea, ' +
-                                                ' a.descripcion, ' +
+                                                ' a.descripcion as descArea, ' +
                                                 ' f.idServicio, ' +
-                                                ' s.descripcion, ' +
+                                                ' s.descripcion as descServ, ' +
                                                 ' f.fecha, ' +
                                                 ' f.condicionServicio, ' +
                                                 ' f.nroEvento, ' +

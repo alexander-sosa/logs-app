@@ -26,9 +26,9 @@ class LogFisicoController {
         return __awaiter(this, void 0, void 0, function* () {
             const logs = yield database_1.default.promise().query(' SELECT f.idFisicoLog, ' +
                 ' f.idArea, ' +
-                ' a.descripcion, ' +
+                ' a.descripcion as descArea, ' +
                 ' f.idServicio, ' +
-                ' s.descripcion, ' +
+                ' s.descripcion as descServ, ' +
                 ' f.fecha, ' +
                 ' f.condicionServicio, ' +
                 ' f.nroEvento, ' +
@@ -72,9 +72,9 @@ class LogFisicoController {
             const { id } = req.params;
             const logs = yield database_1.default.promise().query(' SELECT f.idFisicoLog, ' +
                 ' f.idArea, ' +
-                ' a.descripcion, ' +
+                ' a.descripcion as descArea, ' +
                 ' f.idServicio, ' +
-                ' s.descripcion, ' +
+                ' s.descripcion as descServ, ' +
                 ' f.fecha, ' +
                 ' f.condicionServicio, ' +
                 ' f.nroEvento, ' +
