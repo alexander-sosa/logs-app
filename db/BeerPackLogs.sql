@@ -142,7 +142,16 @@ CREATE TABLE LogFisico (
     FOREIGN KEY (idServicio) REFERENCES Servicio(idServicio)
 );
 
+
+
 --Table Usuario para el Login-out
 CREATE TABLE Usuario(
-    
+    idUsuario int NOT NULL AUTO_INCREMENT,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    contrasenia VARCHAR(200) NOT NULL,
+    lastupdate date NOT NULL,
+    tuplstatus VARCHAR(100) NOT NULL
 );
+
