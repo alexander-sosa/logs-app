@@ -141,3 +141,8 @@ CREATE TABLE LogFisico (
     FOREIGN KEY (idArea) REFERENCES Area(idArea),
     FOREIGN KEY (idServicio) REFERENCES Servicio(idServicio)
 );
+
+--Table Usuario para el Login-out
+CREATE TABLE Usuario(
+    
+);
