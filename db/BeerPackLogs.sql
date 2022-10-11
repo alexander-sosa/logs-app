@@ -146,7 +146,7 @@ CREATE TABLE LogFisico (
 
 --Table Usuario para el Login-out
 CREATE TABLE Usuario(
-    idUsuario int NOT NULL AUTO_INCREMENT,
+    idUsuario int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombres VARCHAR(100) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
