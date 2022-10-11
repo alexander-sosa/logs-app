@@ -151,7 +151,7 @@ CREATE TABLE Usuario(
     apellidos VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     contrasenia VARCHAR(200) NOT NULL,
-    lastupdate date NOT NULL,
-    tuplstatus VARCHAR(100) NOT NULL
+    lastupdate timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    tuplestatus bool NOT NULL DEFAULT TRUE,
 );
 
